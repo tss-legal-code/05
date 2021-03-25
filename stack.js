@@ -56,7 +56,7 @@ class Stack {
     }
 
     static fromIterable(iterable) {
-        if (iterable[Symbol.iterator] == "undefined") throw new Error('Ошибка! Объект не итерируемый!')
+        if (iterable[Symbol.iterator] == undefined) throw new Error('Ошибка! Объект не итерируемый!')
 
         var iterableLength = 0;
         var tempArray = []
