@@ -75,6 +75,3 @@ class Stack {
 
     }
 }
-
-let a = new Stack('1')
-console.log('a: ', a );
