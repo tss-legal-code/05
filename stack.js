@@ -4,8 +4,11 @@ class Stack {
 
     constructor(initialStackCapacity) {
         if (typeof(initialStackCapacity) !== 'number' || !Number.isInteger(initialStackCapacity) || initialStackCapacity <= 1) throw new Error('Ошибка!');
-        if (initialStackCapacity == undefined) this.maxStackCapacity = 10;
-        this.maxStackCapacity = initialStackCapacity;
+        if (initialStackCapacity == undefined) {
+            this.maxStackCapacity = 10
+        } else {
+            this.maxStackCapacity = initialStackCapacity;
+        }
         this.countOfElementsOnStack = 0;
     }
 
