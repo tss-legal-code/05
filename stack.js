@@ -3,11 +3,12 @@
 class Stack {
 
     constructor(initialStackCapacity) {
-        if (typeof(initialStackCapacity) !== 'number' || !Number.isInteger(initialStackCapacity) || initialStackCapacity <= 1) throw new Error('Ошибка!');
         if (initialStackCapacity == undefined) {
             this.maxStackCapacity = 10
+        } else if (typeof(initialStackCapacity) != 'number' || !Number.isInteger(initialStackCapacity) || initialStackCapacity < 1) {
+                 throw new Error('Ошибка!')
         } else {
-            this.maxStackCapacity = initialStackCapacity;
+            this.maxStackCapacity = +initialStackCapacity;
         }
         this.countOfElementsOnStack = 0;
     }
@@ -74,3 +75,6 @@ class Stack {
 
     }
 }
+
+let a = new Stack('1')
+console.log('a: ', a );
